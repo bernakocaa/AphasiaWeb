@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>@ViewBag.Title - Terappin Online Psikologlar | Çevrimiçi Psikologları Hemen Keşfet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1.0, minimum-scale=1.0, maximum-scale=5.0">
+    <link rel="stylesheet" href="/home/admin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/home/admin/css/style.css">
+    <link rel="stylesheet" href="/home/admin/css/custom.css">
+    @await Html.PartialAsync("_Header")
+</head>
+
+<body>
+    <div id="wrapper">
+        @await Html.PartialAsync("_Navbar")
+        
+        <div class="content-page">
+            <div class="content">
+                <div class="container-fluid" id="body">
+                    @RenderBody()
+                </div>
+            </div>
+
+            @await Html.PartialAsync("_Footer")
+        </div>
+    </div>
+
+    <script src="/home/admin/js/jquery.min.js"></script>
+    <script src="/home/admin/js/bootstrap.bundle.min.js"></script>
+    <script src="/home/admin/js/custom.js"></script>
+    @RenderSection("js", required: false)
+</body>
+
+</html>

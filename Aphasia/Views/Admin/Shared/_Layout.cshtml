@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Dashboard | Qovex - Admin & Dashboard Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="Themesbrand" name="author">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- jquery.vectormap css -->
+    <link href="admin/assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Css -->
+    <link href="admin/assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+    <!-- Icons Css -->
+    <link href="admin/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <!-- App Css-->
+    <link href="admin/assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+
+</head>
+
+<body data-layout="detached" data-topbar="colored">
+    <div class="container-fluid">
+        <div id="layout-wrapper">
+            @await Html.PartialAsync("/Views/Admin/Shared/_Header.cshtml")
+            @await Html.PartialAsync("/Views/Admin/Shared/_Sidebar.cshtml")
+        </div>
+
+        <div>
+            @RenderBody()
+        </div>
+
+        @await Html.PartialAsync("/Views/Admin/Shared/_Footer.cshtml")
+    </div>
+
+    <div class="rightbar-overlay"></div>
+
+    <!-- JAVASCRIPT -->
+    <script src="admin/assets/libs/jquery/jquery.min.js"></script>
+    <script src="admin/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="admin/assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="admin/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="admin/assets/libs/node-waves/waves.min.js"></script>
+    <script src="admin/assets/libs/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- apexcharts -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- jquery.vectormap map -->
+    <script src="admin/assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="admin/assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-us-merc-en.js"></script>
+
+    <script src="admin/assets/js/pages/dashboard.init.js"></script>
+    <script src="admin/assets/js/app.js"></script>
+
+    @RenderSection("js", required: false)
+    </body>
+</html>
